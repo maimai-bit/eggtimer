@@ -1,0 +1,64 @@
+
+        @font-face {
+            font-family: 'PixelifySans';
+            src: url('fonts/PixelifySans-VariableFont_wght.ttf') format('truetype');
+        }
+
+        body {
+            font-family: 'PixelifySans', sans-serif;
+            background-color: #f8f8f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+            width: 240px;
+            position: relative;
+        }
+
+        .return-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 16px;
+            text-decoration: none;
+            color: black;
+            cursor: pointer;
+        }
+
+        .timer-box {
+            padding: 20px;
+        }
+
+        .egg-image {
+            width: 200px;
+            height: auto;
+        }
+
+        #timer-display {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+
+        button {
+            font-family: 'PixelifySans', sans-serif;
+            background: #d4d4d4;
+            border: none;
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        button:disabled {
+            background: #a0a0a0;
+            cursor: not-allowed;
+        }

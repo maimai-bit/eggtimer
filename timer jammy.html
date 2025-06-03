@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Egg Timer</title>
+    <link rel="stylesheet" href="styless.css">
+    
+</head>
+<body>
+    <div class="container">
+        <a href="menu page.html" class="return-button">back</a>
+        <div class="timer-box">
+            <img src="egg gif.gif" alt="Egg Timer" class="egg-image">
+            <p id="timer-display">08:00</p>
+            <div class="buttons">
+                <button id="start-btn">Start</button>
+                <button id="pause-btn" disabled>Pause</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let timer;
+        let timeLeft = 480;
+        let isPaused = false;
+
+        const timerDisplay = document.getElementById("timer-display");
+        const startBtn = document.getElementById("start-btn");
+        const pauseBtn = document.getElementById("pause-btn");
+
+        // Function to start the timer
+        startBtn.addEventListener("click", function () {
+            startBtn.style.display = "none"; // Hide Start button
+            pauseBtn.disabled = false;
+            startTimer();
+        });
+
+        pauseBtn.addEventListener("click", function () {
+            if (isPaused) {
+                startTimer();
+                pauseBtn.textContent = "Pause";
+            } else {
+                clearInterval(timer);
+                pauseBtn.textContent = "Unpause";
+            }
+            isPaused = !isPaused;
+        });
+
+        function startTimer() {
+            timer = setInterval(() => {
+                if (timeLeft > 0) {
+                    timeLeft--;
+                    updateDisplay();
+                } else {
+                    clearInterval(timer);
+                    timerDisplay.textContent = "You're done!";
+                    pauseBtn.style.display = "none";
+                    startBtn.style.display = "inline-block";
+                }
+            }, 1000);
+        }
+
+        // Update display function
+        function updateDisplay() {
+            let minutes = Math.floor(timeLeft / 60);
+            let seconds = timeLeft % 60;
+            timerDisplay.textContent = `${minutes}:${seconds.toString().padStart(2, "0")}`;
+        }
+    </script>
+</body>
+</html>

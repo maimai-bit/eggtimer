@@ -1,0 +1,58 @@
+@font-face {
+    font-family: 'PixelFont';
+    src: url('PixelifySans-VariableFont_wght.ttf') format('truetype');
+    
+}
+
+body {
+    font-family: 'PixelFont', pixelify;
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.window {
+        text-align: center;
+        background: white;
+        padding: 50px;
+        border-radius: 10px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+        width: 220px;
+        position: relative;
+}
+
+.header {
+    background: #fff;
+    padding: 1px 10px;
+    display: flex;
+    justify-content: left;
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+
+.close {
+    cursor: pointer;
+}
+
+.content {
+    padding: 27px;
+}
+
+.clickable-area {
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+.clock-image {
+    width: 180px;
+}
+
+p {
+    margin-top: 10px;
+    font-size: 20px;
+}

@@ -1,0 +1,64 @@
+@font-face {
+    font-family: 'PixelFont';
+    src: url('PixelifySans-VariableFont_wght.ttf') format('truetype');
+
+}
+
+body {
+    font-family: 'PixelFont', sans-serif;
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+
+.window {
+    background: white;
+    border-radius: 6px;
+    width: 320px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.header {
+    background: #fff;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+.close {
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    padding: px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 29px;
+    border-bottom: 1px solid #ddd;
+    text-decoration: none;
+    color: black;
+}
+
+.menu-item img {
+    width: 60px;
+    margin-right: 12px;
+}
+
+.menu-item span {
+    font-size: 16px;
+}
